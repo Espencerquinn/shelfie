@@ -30,7 +30,7 @@ class App extends Component {
       })
   }
 
-  componentDidUpdate() { //as soon as web page loads - do this
+  componentDidUpdate(props) { //as soon as web page loads - do this
     axios.get('/api/products').then(response => { //promise- response is paramentater 
       this.setState({ inventoryList: response.data }) //response in this case represents an object 
     })
